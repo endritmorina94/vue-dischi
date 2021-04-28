@@ -32,11 +32,11 @@
                 <!-- Contenitore Album -->
                 <section class="albums-container">
                     <!-- Single Album -->
-                    <div class="album">
+                    <div v-for="disco in dischi" class="album">
 
                         <div class="album-content">
                             <div class="album-img">
-                                <img src="" alt="">
+                                <img :src="disco.poster" alt="">
                                 <div class="overlay">
                                     <i class="fas fa-play"></i>
                                 </div>
@@ -44,10 +44,11 @@
 
                             <div class="album-info">
                                 <div class="album-name">
-                                    <h4></h4>
+                                    <h4>{{ disco.title }}</h4>
                                 </div>
                                 <div class="album-author">
-                                    <p class="author"></p>
+                                    <p class="author">{{ disco.author }}</p>
+                                    <p class="year">{{ disco.year }}</p>
                                 </div>
                             </div>
                         </div>

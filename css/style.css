@@ -1,29 +1,29 @@
 /* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* COMMON */
 body {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
 }
 
 .app {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
-/* FINE COMMON */
 
+/* FINE COMMON */
 /* HEADER */
-header{
+header {
     width: 100%;
     padding: 10px 15px;
     background-color: #070707;
@@ -33,10 +33,10 @@ header{
 }
 
 .logo {
-    width: 60px;
+    width: 45px;
 }
-/* FINE HEADER */
 
+/* FINE HEADER */
 /* MAIN */
 main {
     width: 100%;
@@ -47,92 +47,94 @@ main {
     overflow-y: auto;
 }
 
-main h2 {
-  font-weight: 800;
-  font-size: 23px;
-}
-
 .albums-container {
-  margin-top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .album {
-  width: calc(100% / 6 - 20px);
-  text-align: left;
-  margin-right: 23px;
-  margin-bottom: 10px;
-  background-color: #181818;
-  border-radius: 5px;
-  transition: background-color 0.5s;
+    width: 200px;
+    text-align: center;
+    margin-right: 23px;
+    margin-bottom: 10px;
+    background-color: #181818;
+    border-radius: 5px;
+    transition: background-color 0.5s;
 }
 
 .album:nth-child(6n+0) {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .album-content {
-  padding: 15px 15px 35px;
+    padding: 15px 15px 35px;
 }
 
 .album-img {
-  position: relative;
-  display: flex;
-  margin-bottom: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 .album-img img {
-  width: 100%;
+    width: 100%;
+    height: 200px;
 }
 
 .overlay i {
-  font-size: 11px;
-  background-color: #1DB954;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 40px;
-  position: absolute;
-  bottom: 0;
-  right: 8px;
-  opacity: 0;
-  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
-  transition: all 0.4s;
+    font-size: 11px;
+    background-color: #1DB954;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    opacity: 0;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
 }
 
 .album:hover {
-  background-color: #282828;
+    background-color: #282828;
 }
 
 .album:hover i {
-  opacity: 1;
-  transform: translateY(-10px);
+    opacity: 1;
+    transform: translateY(-10px);
 }
 
 .album-name {
-  padding: 15px 0 7px;
-  overflow-x: hidden;
+    padding: 15px 0 7px;
+    overflow-x: hidden;
 }
 
 .album-name h4 {
-  white-space: nowrap;
-  font-weight: 700;
+    font-size: 17px;
+    white-space: nowrap;
+    font-weight: 700;
 }
 
 .album-author {
-  overflow-x: hidden;
+    overflow-x: hidden;
+    color: #B3B3B3;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 .author {
-  color: #B3B3B3;
-  font-size: 13px;
-  font-weight: 600;
-  white-space: nowrap;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.year {
+    font-size: 13px;
 }
