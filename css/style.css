@@ -20,8 +20,8 @@ body {
 img {
     width: 100%;
 }
-
 /* FINE COMMON */
+
 /* HEADER */
 header {
     width: 100%;
@@ -52,12 +52,12 @@ header {
 .buttons .arrow {
     cursor: pointer;
 }
-
 /* FINE HEADER */
+
 /* MAIN */
 main {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 69px);
     background: rgb(32, 32, 32);
     background: linear-gradient(0deg, rgba(18, 18, 18, 1) 40%, rgba(32, 32, 32, 1) 100%);
     padding: 20px 30px;
@@ -65,9 +65,7 @@ main {
 }
 
 .albums-container {
-    margin-top: 20px;
     width: 100%;
-    padding-bottom: 80px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -81,11 +79,8 @@ main {
     margin-bottom: 10px;
     background-color: #181818;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.5s;
-}
-
-.album:nth-child(6n+0) {
-    margin-right: 0;
 }
 
 .album-content {
@@ -156,3 +151,26 @@ main {
 .year {
     font-size: 13px;
 }
+/* FINE MAIN */
+
+/* Scrollbar restyle */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f4c4c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #909090;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #c4bdbd;
+}
+/* Fine scrollbar restyle */
