@@ -60,7 +60,7 @@ main {
     height: calc(100% - 69px);
     background: rgb(32, 32, 32);
     background: linear-gradient(0deg, rgba(18, 18, 18, 1) 40%, rgba(32, 32, 32, 1) 100%);
-    padding: 20px 30px;
+    padding: 20px 10px 20px 30px;
     overflow-y: auto;
 }
 
@@ -75,7 +75,7 @@ main {
 .album {
     width: 200px;
     text-align: center;
-    margin-right: 23px;
+    margin-right: 20px;
     margin-bottom: 10px;
     background-color: #181818;
     border-radius: 5px;

@@ -48,7 +48,7 @@
             <!-- Contenitore Album -->
             <section class="albums-container">
                 <!-- Single Album -->
-                <div v-for="disco in dischi" v-if="disco.genreFound" class="album">
+                <div v-for="(disco, index) in dischi" v-if="filterByGenre(index)" class="album">
 
                     <div class="album-content">
                         <div class="album-img">

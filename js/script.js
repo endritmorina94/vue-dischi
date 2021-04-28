@@ -14,12 +14,12 @@ var app = new Vue(
         methods: {
 
             //Questa funzione che viene passata con parametro true o false, stabilisce se l'indice indexOfGen deve aumentare o diminuire
-            changeGenre(){
+            changeGenre(forward){
                 //Impostiamo la variabiole genreChoosen a true, inquanto è stato scelto di filtrare i dischi per generi
                 this.genreChoosen = true;
 
                 //Se l'argomento passato è true.. aumentiamo l'indice
-                if(true){
+                if(forward){
                     if(this.indexOfGen < this.generi.length - 1){
                         this.indexOfGen += 1;
                     } else {
@@ -27,26 +27,23 @@ var app = new Vue(
                     }
                 //Altrimenti..
                 } else {
-                    if(this.indexOfGen < 0){
+                    if(this.indexOfGen > 0){
                         this.indexOfGen -= 1;
                     } else {
                         this.indexOfGen = this.generi.length - 1;
                     }
                 }
+            },
 
-                //Cicliamo con un foreach gl'elementi dell'array dischi e controlliamo
-                //Che il loro genere corrisponda o meno al genere scelto dall'utente,
-                //in caso di corrispondenza la key genreFound dell'oggetto ciclato diventerò true.
-                //Se l'indice è 0 ("tutti"), tutti gl'oggetti avranno la variabile genreFound true.
-                this.dischi.forEach((element) => {
-                    if(this.indexOfGen == 0){
-                        element.genreFound = true;
-                    } else if (this.generi[this.indexOfGen] != element.genre) {
-                        element.genreFound = false;
-                    } else {
-                        element.genreFound = true;
-                    }
-                });
+            //Con questa funzione controllo se il genere dell'oggetto corrisponde al genre attuale,
+            //se c'è corrispondenza, torno true mostrandolo altrimenti torno false nascondendolo
+            //indexOfDisco ==> idice del disco
+            filterByGenre(indexOfDisco) {
+                if (this.dischi[indexOfDisco].genre == this.generi[this.indexOfGen] || this.indexOfGen == -1 || this.indexOfGen == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
         },
         mounted() {
@@ -55,12 +52,7 @@ var app = new Vue(
                 .then((response) => {
                     const result = response.data;
 
-                    //Con un ciglio foearch aggiungiamo la key genreFound impostata come true a tutti gli oggetti
-                    result.response.forEach((element) => {
-                        element.genreFound = true;
-                    });
-
-                    //Con la funzione sort li mettiamo in ordine crescente in base alla loro key year
+                    //Con la funzione sort mettiamo in ordine crescente gl'oggetti in base alla loro key year
                     result.response.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
 
                     //Ora assegnamo tutti gl'oggetti al nostro array dischi
