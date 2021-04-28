@@ -24,6 +24,25 @@
                     <img src="img/download.png" alt="">
                 </div>
 
+                <div class="buttons">
+
+                    <div class="arrow left" @click="changeGenre(false)">
+                        <div class="circle-top">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                    </div>
+
+                    <h3 v-if="!genreChoosen">GENRES</h3>
+                    <h3 v-else>{{generi[indexOfGen]}}</h3>
+
+                    <div class="arrow right" @click="changeGenre(true)">
+                        <div class="circle-top">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+
+                </div>
+
             </header>
             <!-- Fine HEADER -->
 
@@ -32,7 +51,7 @@
                 <!-- Contenitore Album -->
                 <section class="albums-container">
                     <!-- Single Album -->
-                    <div v-for="disco in dischi" class="album">
+                    <div  v-for="disco in dischi" v-if="disco.genreFound" class="album">
 
                         <div class="album-content">
                             <div class="album-img">
