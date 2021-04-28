@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vue Dischi</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Dischi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+
     <body>
+        <!-- ROOT -->
+        <div id="root" class="app">
+            <!-- HEADER -->
+            <header>
 
+                <div class="logo">
+                    <img src="img/download.png" alt="">
+                </div>
 
-    <script src="js/script.js" charset="utf-8"></script>
+            </header>
+            <!-- Fine HEADER -->
+
+            <!-- INIZIO MAIN -->
+            <main>
+                <!-- Contenitore Album -->
+                <section class="albums-container">
+                    <!-- Single Album -->
+                    <div class="album">
+
+                        <div class="album-content">
+                            <div class="album-img">
+                                <img src="" alt="">
+                                <div class="overlay">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+
+                            <div class="album-info">
+                                <div class="album-name">
+                                    <h4></h4>
+                                </div>
+                                <div class="album-author">
+                                    <p class="author"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Fine single Album -->
+                </section>
+            </main>
+            <!-- Fine MAIN -->
+        </div>
+        <!-- Fine ROOT -->
     </body>
+
+</html>
+
+
+
+<script src="js/script.js" charset="utf-8"></script>
+</body>
+
 </html>
