@@ -46,6 +46,8 @@ var app = new Vue(
                         element.genreFound = true;
                     });
 
+                    result.response.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
+
                     this.dischi = result.response;
                     this.dischi.forEach((element) => {
                         if(!this.generi.includes(element.genre)) {
