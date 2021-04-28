@@ -7,7 +7,9 @@ var app = new Vue(
             //Creo un array per i generi musicali che poi verrà popolato con quelli dei dischi forniti dalla API
             generi:["All"],
             //Imposto un indice per l'array generi a -1
-            indexOfGen: -1
+            indexOfGen: -1,
+            //Creo una variabile flag per stabilire se un filtro genere è stato scelto o meno
+            genreChoosen: false
         },
         methods: {
 
